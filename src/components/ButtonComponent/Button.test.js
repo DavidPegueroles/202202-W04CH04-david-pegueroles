@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import Button from "./Button";
 
 describe("Given a Button component", () => {
@@ -12,6 +13,20 @@ describe("Given a Button component", () => {
       const button = screen.getByRole("button");
 
       expect(button).toHaveTextContent(expectedTest);
+    });
+  });
+
+  describe("When it is clicked", () => {
+    test("Then it should execute a given action", () => {
+      const mockAction = jest.fn();
+
+      render(<Button actionOnClick={mockAction} />);
+
+      const button = screen.getByRole("button");
+
+      userEvent.click(button);
+
+      expect(mockAction).toHaveBeenCalled();
     });
   });
 });
