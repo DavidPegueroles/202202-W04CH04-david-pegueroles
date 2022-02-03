@@ -8,7 +8,7 @@ describe("Given a Button component", () => {
       const text = "click me";
       const expectedTest = "click me";
 
-      render(<Button text={text} />);
+      render(<Button text={text} actionOnClick={() => "a"} />);
 
       const button = screen.getByRole("button");
 
@@ -20,7 +20,7 @@ describe("Given a Button component", () => {
     test("Then it should execute a given action", () => {
       const mockAction = jest.fn();
 
-      render(<Button actionOnClick={mockAction} />);
+      render(<Button text="" actionOnClick={mockAction} />);
 
       const button = screen.getByRole("button");
 
