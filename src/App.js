@@ -1,6 +1,3 @@
-import Button from "react-bootstrap/Button";
-import bootstrap from "bootstrap";
-
 function App() {
   return (
     <>
