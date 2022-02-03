@@ -1,3 +1,5 @@
+import Input from "./components/Input/Input";
+
 function App() {
   return (
     <>
@@ -8,33 +10,25 @@ function App() {
       <main>
         <section className="d-flex align-items-center justify-content-center">
           <form action="" className="row g-3 w-50 p-3 ">
-            <div className="col-md-6 ">
-              <label forhtml="inputEmail3" className="form-label">
-                Name:
-              </label>
-              <input type="text" className="form-control" />
-            </div>
-
-            <div className="col-md-6">
-              <label forhtml="inputEmail3" className="form-label">
-                Last name:
-              </label>
-              <input type="text" className="form-control" />
-            </div>
-
-            <div className="col-md-6">
-              <label forhtml="inputEmail3" className="form-label">
-                Birthdate:
-              </label>
-              <input type="text" className="form-control" />
-            </div>
-
-            <div className="col-md-6">
-              <label forhtml="inputEmail3" className="form-label">
-                Email:
-              </label>
-              <input type="text" className="form-control" />
-            </div>
+            <Input
+              type={"text"}
+              content={"Name"}
+              name={"name"}
+              placeholder={"Luis"}
+            />
+            <Input
+              type={"text"}
+              content={"Last name"}
+              name={"lastname"}
+              placeholder={"Testeador"}
+            />
+            <Input type={"date"} content={"Birthday"} name={"birthday"} />
+            <Input
+              type={"email"}
+              content={"Email"}
+              name={"name"}
+              placeholder={"luistesteador@example.com"}
+            />
 
             <div className="d-flex align-items-center justify-content-around">
               <button className="btn btn-primary">Anterior</button>
