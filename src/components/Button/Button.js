@@ -2,7 +2,13 @@ import PropTypes from "prop-types";
 
 const Button = ({ text, actionOnClick }) => {
   return (
-    <button className="btn btn-primary" onClick={actionOnClick}>
+    <button
+      className="btn btn-primary"
+      onClick={(event) => {
+        event.preventDefault();
+        actionOnClick();
+      }}
+    >
       {text}
     </button>
   );

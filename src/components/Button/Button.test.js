@@ -6,13 +6,13 @@ describe("Given a Button component", () => {
   describe("When it receives 'click me'", () => {
     test("Then it should render a button with this text inside", () => {
       const text = "click me";
-      const expectedTest = "click me";
+      const expectedText = "click me";
 
       render(<Button text={text} actionOnClick={() => "a"} />);
 
       const button = screen.getByRole("button");
 
-      expect(button).toHaveTextContent(expectedTest);
+      expect(button).toHaveTextContent(expectedText);
     });
   });
 
@@ -20,7 +20,7 @@ describe("Given a Button component", () => {
     test("Then it should execute a given action", () => {
       const mockAction = jest.fn();
 
-      render(<Button text="" actionOnClick={mockAction} />);
+      render(<Button text={""} actionOnClick={mockAction} />);
 
       const button = screen.getByRole("button");
 
