@@ -1,4 +1,4 @@
-const Input = ({ type, content, name, placeholder }) => {
+const Input = ({ type, content, name, placeholder, inputOnChange }) => {
   return (
     <div className="col-md-6 ">
       <label forhtml={name} className="form-label">
@@ -9,6 +9,7 @@ const Input = ({ type, content, name, placeholder }) => {
         name={name}
         className="form-control"
         placeholder={placeholder}
+        onChange={inputOnChange}
       />
     </div>
   );
